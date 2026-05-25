@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Zakqy Al Farizi | Curriculum Vitae</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #030712;
+            --bg-secondary: #091225;
+            --accent-teal: #06b6d4;
+            --accent-purple: #6366f1;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --glass-bg: rgba(11, 21, 40, 0.65);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glow-color: rgba(6, 182, 212, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle at 10% 20%, #0c1833 0%, var(--bg-primary) 100%);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Glowing Background Blobs */
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(180px);
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .blob-1 {
+            top: 5%;
+            left: -100px;
+            background: var(--accent-teal);
+        }
+
+        .blob-2 {
+            bottom: 5%;
+            right: -100px;
+            background: var(--accent-purple);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ACTIONS PANEL */
+        .action-panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-back {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--text-main);
+        }
+
+        .btn-back:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(-3px);
+        }
+
+        .btn-print {
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+            color: white;
+            box-shadow: 0 8px 24px rgba(6, 182, 212, 0.3);
+        }
+
+        .btn-print:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(6, 182, 212, 0.5);
+        }
+
+        /* CV CARD */
+        .cv-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 35% 65%;
+        }
+
+        /* LEFT SIDEBAR */
+        .cv-sidebar {
+            background: rgba(6, 182, 212, 0.05);
+            border-right: 1px solid var(--glass-border);
+            padding: 40px 30px;
+        }
+
+        .profile-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-img-wrapper {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            padding: 4px;
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.2);
+        }
+
+        .profile-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--bg-primary);
+        }
+
+        .cv-section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-teal);
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Contact Details */
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .contact-item i {
+            color: var(--accent-teal);
+            font-size: 16px;
+            margin-top: 2px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .contact-item span {
+            color: var(--text-muted);
+            word-break: break-word;
+        }
+
+        /* Education Details */
+        .education-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .education-item {
+            position: relative;
+        }
+
+        .edu-year {
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-purple);
+            margin-bottom: 4px;
+        }
+
+        .edu-degree {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 2px;
+        }
+
+        .edu-school {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Skills Details */
+        .skills-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .skill-item i {
+            color: var(--accent-teal);
+            font-size: 12px;
+        }
+
+        /* RIGHT MAIN CONTENT */
+        .cv-main {
+            padding: 50px 45px;
+        }
+
+        .cv-header {
+            margin-bottom: 35px;
+        }
+
+        .cv-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #fff 0%, var(--accent-teal) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cv-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--accent-purple);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-right {
+            margin-bottom: 35px;
+        }
+
+        .section-right-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-right-title i {
+            color: var(--accent-teal);
+        }
+
+        .profile-desc {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .timeline-item {
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -27px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-teal);
+            border: 3px solid var(--bg-primary);
+            box-shadow: 0 0 10px var(--accent-teal);
+        }
+
+        .timeline-year {
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-teal);
+            margin-bottom: 4px;
+        }
+
+        .timeline-role {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 2px;
+        }
+
+        .timeline-org {
+            font-family: 'Outfit', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-purple);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .timeline-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 820px) {
+            .cv-card {
+                grid-template-columns: 1fr;
+            }
+
+            .cv-sidebar {
+                border-right: none;
+                border-bottom: 1px solid var(--glass-border);
+                padding: 40px;
+            }
+
+            .cv-main {
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .cv-sidebar, .cv-main {
+                padding: 30px 20px;
+            }
+
+            .cv-name {
+                font-size: 32px;
+            }
+
+            .cv-title {
+                font-size: 16px;
+            }
+        }
+
+        /* PRINT STYLES - Optimized for beautiful A4 PDF creation */
+        @media print {
+            body {
+                background: white !important;
+                color: #111827 !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .blob, .action-panel {
+                display: none !important;
+            }
+
+            .container {
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .cv-card {
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+                backdrop-filter: none !important;
+                -webkit-backdrop-filter: none !important;
+                grid-template-columns: 32% 68% !important;
+                height: 100vh;
+            }
+
+            .cv-sidebar {
+                background: #f9fafb !important;
+                border-right: 1.5px solid #e5e7eb !important;
+                padding: 30px 20px !important;
+            }
+
+            .cv-main {
+                padding: 30px 30px !important;
+            }
+
+            .cv-name {
+                color: #0f172a !important;
+                background: none !important;
+                -webkit-text-fill-color: initial !important;
+            }
+
+            .cv-section-title {
+                color: #0d9488 !important;
+                border-bottom: 1.5px solid #e5e7eb !important;
+            }
+
+            .edu-degree, .timeline-role, .section-right-title {
+                color: #0f172a !important;
+            }
+
+            .edu-year, .timeline-year {
+                color: #0d9488 !important;
+            }
+
+            .edu-school, .timeline-org {
+                color: #4f46e5 !important;
+            }
+
+            .contact-item span, .skill-item, .profile-desc, .timeline-desc, .contact-item i, .skill-item i {
+                color: #374151 !important;
+            }
+
+            .timeline-item::before {
+                background: #0d9488 !important;
+                border: 2px solid white !important;
+                box-shadow: none !important;
+            }
+
+            .timeline {
+                border-left: 1.5px solid #e5e7eb !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Glowing Background Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="container">
+        <!-- ACTIONS PANEL -->
+        <div class="action-panel">
+            <a href="index.html" class="btn btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <button class="btn btn-print" onclick="window.print()">
+                <i class="fa-solid fa-file-pdf"></i> Print CV / Save PDF
+            </button>
+        </div>
+
+        <!-- CV MAIN CARD -->
+        <div class="cv-card">
+            <!-- LEFT SIDEBAR -->
+            <div class="cv-sidebar">
+                <div class="profile-container">
+                    <div class="profile-img-wrapper">
+                        <!-- Use poto profile photo -->
+                        <img src="poto profile/poto.jpeg" alt="Muhammad Zakqy Al Farizi">
+                    </div>
+                </div>
+
+                <!-- CONTACT SECTION -->
+                <div class="cv-sidebar-section">
+                    <h2 class="cv-section-title">Contact</h2>
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+62 821-8608-4048</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>zakqyaja123@gmail.com</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Jl. Bintara 2, Gg. Mushola Tawakal No. 32, Sukarame, Bandar Lampung</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- EDUCATION SECTION -->
+                <div class="cv-sidebar-section">
+                    <h2 class="cv-section-title">Education</h2>
+                    <div class="education-list">
+                        <div class="education-item">
+                            <p class="edu-year">2022 - 2026</p>
+                            <p class="edu-degree">S1 Informatics</p>
+                            <p class="edu-school">Teknokrat Indonesia University</p>
+                        </div>
+                        <div class="education-item">
+                            <p class="edu-year">2019 - 2022</p>
+                            <p class="edu-degree">Science Major</p>
+                            <p class="edu-school">SMA YP UNILA Bandar Lampung</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KEY SKILLS SECTION -->
+                <div class="cv-sidebar-section">
+                    <h2 class="cv-section-title">Skills</h2>
+                    <ul class="skills-list">
+                        <li class="skill-item">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span>Use of Technology</span>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span>UI / UX Design</span>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span>Time Management</span>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span>Programming Languages</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- RIGHT MAIN CONTENT -->
+            <div class="cv-main">
+                <div class="cv-header">
+                    <h1 class="cv-name">Muhammad Zakqy Al Farizi</h1>
+                    <p class="cv-title">Informatics Specialist</p>
+                </div>
+
+                <!-- PROFILE SUMMARY -->
+                <div class="section-right">
+                    <h2 class="section-right-title">
+                        <i class="fa-solid fa-user-tie"></i> Profile Summary
+                    </h2>
+                    <p class="profile-desc">
+                        I am a creative programmer who is committed to providing maximum contribution in working on a project, has a deep understanding of technology, and is easy to adapt to new things.
+                    </p>
+                </div>
+
+                <!-- ORGANIZATIONAL EXPERIENCE -->
+                <div class="section-right">
+                    <h2 class="section-right-title">
+                        <i class="fa-solid fa-briefcase"></i> Organizational Experiences
+                    </h2>
+                    <div class="timeline">
+                        <!-- Experience 1 -->
+                        <div class="timeline-item">
+                            <p class="timeline-year">2022 - 2024</p>
+                            <h3 class="timeline-role">Active Member</h3>
+                            <h4 class="timeline-org">UKM Animedia Teknokrat</h4>
+                            <p class="timeline-desc">
+                                The experience of organizing at UKM Animedia Teknokrat has given me many valuable lessons. Apart from improving my technical skills in the field of animation and photography, I also learned about the importance of teamwork, time management, and creativity.
+                            </p>
+                        </div>
+
+                        <!-- Experience 2 -->
+                        <div class="timeline-item">
+                            <p class="timeline-year">2019 - 2020</p>
+                            <h3 class="timeline-role">Head of Handball Sports</h3>
+                            <h4 class="timeline-org">YP UNILA High School Handball Club</h4>
+                            <p class="timeline-desc">
+                                Experience as Chair of the YP UNILA High School Handball Club, I actively lead and organize various club activities. This experience has developed my ability to lead a team, communicate effectively with club members and the school, and manage time efficiently.
+                            </p>
+                        </div>
+
+                        <!-- Experience 3 -->
+                        <div class="timeline-item">
+                            <p class="timeline-year">2019 - 2020</p>
+                            <h3 class="timeline-role">Sports & Social Media Manager</h3>
+                            <h4 class="timeline-org">YP UNILA High School Sports Organization</h4>
+                            <p class="timeline-desc">
+                                For two years as a social media admin at the YP UNILA High School sports organization, I was actively involved in various activities aimed at increasing students' sports interest and achievements. My main task is to look for race information on social media. This experience has equipped me with the ability to communicate effectively and work together in a team.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
