@@ -41,7 +41,7 @@
         <div class="section-home">
             <div class="field-text-home" data-aos="fade-right" data-aos-duration="1200">
                 <h1>Hii, I am <br> <span>Muhammad Zakqy Al Farizi</span></h1>
-                <h3>Informatics<span class="highlight-mu">| Manchester United Fan</span></h3>
+                <h3><span id="typewriter">Informatics Graduate</span><span class="typewriter-cursor">|</span></h3>
                 <div class="hero-actions">
                     <a href="CV ASLI ZAKQY INGRRIS.pdf" target="_blank" class="btn-primary"><i class="fa-solid fa-file-invoice"></i> View CV / Resume</a>
                     <div class="hero-socials">
@@ -119,13 +119,22 @@
     <!-- PROJECTS SECTION -->
     <section class="project" id="project">
         <h1 data-aos="fade-up">Featured <span>Projects</span></h1>
+
+        <!-- Project filters -->
+        <div class="project-filters" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="all">All <span class="filter-count">3</span></button>
+            <button class="filter-btn" data-filter="web">Web Apps <span class="filter-count">2</span></button>
+            <button class="filter-btn" data-filter="game">Games <span class="filter-count">1</span></button>
+        </div>
+
         <div class="container-project">
             <!-- PROJECT 1: Bens Burger -->
-            <div class="field-project" data-aos="fade-right" data-aos-duration="1000">
+            <div class="field-project" data-category="web" data-aos="fade-right" data-aos-duration="1000">
                 <div class="project-img-wrapper">
                     <img src="PROJEK/bensburger.PNG" alt="Bens Burger Website">
                     <div class="project-overlay-btn">
                         <button class="visit-btn" onclick="window.open('https://zakqy.github.io/bensburger/', '_blank')">Live Demo</button>
+                        <button class="detail-btn" onclick="openProjectModal('bensburger')">View Details</button>
                     </div>
                 </div>
                 <div class="field-text-project">
@@ -140,11 +149,12 @@
             </div>
 
             <!-- PROJECT 2: Bread Gift -->
-            <div class="field-project" data-aos="fade-left" data-aos-duration="1000">
+            <div class="field-project" data-category="web" data-aos="fade-left" data-aos-duration="1000">
                 <div class="project-img-wrapper">
                     <img src="PROJEK/breadgift.PNG" alt="Bread Gift Website">
                     <div class="project-overlay-btn">
                         <button class="visit-btn" onclick="window.open('https://breadgift.vercel.app/', '_blank')">Live Demo</button>
+                        <button class="detail-btn" onclick="openProjectModal('breadgift')">View Details</button>
                     </div>
                 </div>
                 <div class="field-text-project">
@@ -160,11 +170,12 @@
             </div>
 
             <!-- PROJECT 3: Sea Heroes Clean Up -->
-            <div class="field-project" data-aos="fade-right" data-aos-duration="1000">
+            <div class="field-project" data-category="game" data-aos="fade-right" data-aos-duration="1000">
                 <div class="project-img-wrapper">
                     <img src="PROJEK/GAME SEA HERO CLEAN UP.png" alt="Sea Heroes Clean Up Game">
                     <div class="project-overlay-btn">
                         <button class="visit-btn" onclick="window.open('https://seaheroescleanup.itch.io/sea-heroes-clean-up', '_blank')">Play Game</button>
+                        <button class="detail-btn" onclick="openProjectModal('seaheroes')">View Details</button>
                     </div>
                 </div>
                 <div class="field-text-project">
@@ -474,6 +485,16 @@
     <button class="back-to-top" id="backToTopBtn" title="Back to Top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
+
+    <!-- PROJECT DETAILS MODAL -->
+    <div id="projectModal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+            <div id="modalBody" class="modal-body-content">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </div>
+    </div>
 
     <!-- AOS ANIMATION JAVASCRIPT -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
