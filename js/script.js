@@ -222,6 +222,70 @@ const projectDetailsData = {
         solution: "Built with Construct 3's high-performance physics behaviors and web canvas scaling. Optimized game assets and logic to ensure minimal resource load and maximum frame rates in modern browsers.",
         techStack: ["CONSTRUCT 3", "HTML5", "GAME DESIGN"],
         demoLink: "https://seaheroescleanup.itch.io/sea-heroes-clean-up"
+    },
+    niscala: {
+        title: "Niscala",
+        subtitle: "Creative Interactive Web Portal",
+        image: "PROJEK/niscala.png",
+        description: "A highly creative and aesthetically pleasing web portal built to present profile information with smooth transitions and a modular layout design.",
+        features: [
+            "Modern glassmorphism UI components designed for high visual appeal.",
+            "Interactive navigation elements with page-level scrolling interactions.",
+            "Clean HTML/CSS architecture focusing on semantic markup.",
+            "Fully responsive layouts styled meticulously for all viewport widths."
+        ],
+        challenge: "Developing lightweight page animations and dynamic interactive hover effects using pure CSS and vanilla JavaScript without slowing down load speeds.",
+        solution: "Structured the application using standard web APIs, CSS Flexbox and Grid, and minimized external packages to achieve near-instantaneous page transitions.",
+        techStack: ["HTML", "CSS", "JAVASCRIPT"],
+        demoLink: "#"
+    },
+    tugas_semester_4: {
+        title: "Tugas Akhir Pemrograman Web 1",
+        subtitle: "Academic Web Application",
+        image: "PROJEK/tugas semester 4.png",
+        description: "A front-end development project created to fulfill academic coursework, demonstrating core capabilities in user interface design and page responsiveness.",
+        features: [
+            "Structured layout elements organized with modern CSS grid layouts.",
+            "Dynamic client-side features built with raw JavaScript handlers.",
+            "Clean, semantic page structure with embedded interactive menus.",
+            "Optimized for standard mobile, tablet, and desktop display resolutions."
+        ],
+        challenge: "Integrating multiple design components and layout guidelines under a tight academic deadline while keeping visual presentation top-tier.",
+        solution: "Established a clear layout grid system early on, separating styling concerns from interactivity scripting to facilitate quick iteration and debugging.",
+        techStack: ["HTML", "CSS", "JAVASCRIPT"],
+        demoLink: "#"
+    },
+    desain_game_blender: {
+        title: "Projek Els Coffee Roastery",
+        subtitle: "3D Assets & Environment Modeling",
+        image: "PROJEK/desain game.png",
+        description: "An asset collection and detailed 3D environment modeling project, featuring high-quality models built specifically for game engine optimization.",
+        features: [
+            "High-fidelity 3D modeling and asset texturing using Blender.",
+            "Topology optimized specifically for rendering efficiency in games.",
+            "Creative asset modeling ranging from props to environment scenery.",
+            "Polished lighting setups and material designs."
+        ],
+        challenge: "Developing high-detail game assets while ensuring the polygon counts and textures are fully optimized to prevent lag during gameplay.",
+        solution: "Employed smart retopology methods and baked complex material details onto optimized low-poly meshes, ensuring seamless game engine compatibility.",
+        techStack: ["BLENDER 3D", "3D MODELING", "GAME DESIGN"],
+        demoLink: "#"
+    },
+    uiux_figma: {
+        title: "UI/UX Figma Design Case Study",
+        subtitle: "High-Fidelity App Prototyping",
+        image: "PROJEK/uiux figma.png",
+        description: "An end-to-end user experience design project depicting wireframing, component-based styling, and high-fidelity interactive prototyping.",
+        features: [
+            "Comprehensive user research, flow charting, and wireframing.",
+            "Cohesive design system including custom components and typography scales.",
+            "Interactive and clickable prototypes showcasing transitions.",
+            "Auto-layout configurations for seamless screen size adaptation."
+        ],
+        challenge: "Creating a navigation flow that is easy for new users to grasp, while maintaining an eye-catching, modern layout style.",
+        solution: "Applied user testing cycles on mid-fidelity wireframes to identify bottlenecks, refining into final Figma layouts with strict design consistency.",
+        techStack: ["FIGMA", "Tugas Akhir Ui Ux", "PROTOTYPING"],
+        demoLink: "#"
     }
 };
 
@@ -238,6 +302,13 @@ function openProjectModal(projectId) {
     
     // Generate features list HTML
     const featuresListHTML = data.features.map(feature => `<li><i class="fa-solid fa-circle-check"></i> <span>${feature}</span></li>`).join('');
+
+    // Generate Demo Link button conditionally
+    const demoButtonHTML = (data.demoLink && data.demoLink !== '#') ? `
+        <a href="${data.demoLink}" target="_blank" class="modal-btn modal-btn-primary">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> ${projectId === 'seaheroes' ? 'Play Game' : 'Live Demo'}
+        </a>
+    ` : '';
 
     // Generate modal content
     modalBody.innerHTML = `
@@ -256,10 +327,10 @@ function openProjectModal(projectId) {
                 <ul class="modal-features-list">
                     ${featuresListHTML}
                 </ul>
-
+ 
                 <div class="modal-section-title">Challenge</div>
                 <p class="modal-text">${data.challenge}</p>
-
+ 
                 <div class="modal-section-title">Solution</div>
                 <p class="modal-text">${data.solution}</p>
             </div>
@@ -271,9 +342,7 @@ function openProjectModal(projectId) {
                 </div>
                 
                 <div class="modal-actions">
-                    <a href="${data.demoLink}" target="_blank" class="modal-btn modal-btn-primary">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> ${projectId === 'seaheroes' ? 'Play Game' : 'Live Demo'}
-                    </a>
+                    ${demoButtonHTML}
                     <button onclick="closeProjectModal()" class="modal-btn modal-btn-secondary">
                         Close
                     </button>
