@@ -175,6 +175,54 @@ projectFilterButtons.forEach(button => {
 
 // PROJECT DETAILS DATA
 const projectDetailsData = {
+    jastipin: {
+        title: "Jastipin",
+        subtitle: "Mobile Purchase & Delivery Service App",
+        image: "PROJEK/Aplikasi Mobile Jastipin .jpg",
+        description: "Aplikasi titip beli barang berbasis mobile “Jastipin” dengan segala kepraktisannya, memfasilitasi koneksi kurir dengan pengguna, memungkinkan mengguna mencari barang yang diinginkan, mengetahui harga dan lokasi, serta memesan melalui aplikasi tersebut. Dan penyedia jasa bertugas membeli dan mengirimkan barang dengan biaya jasa.",
+        features: [
+            "Courier and user connection channel for purchase requests.",
+            "Item searching with price, location details, and ordering options.",
+            "Direct courier routing and order handling system.",
+            "Custom pricing calculator based on delivery fee and item price."
+        ],
+        challenge: "Connecting couriers with users in real-time, managing transaction states, and handling database queries securely across mobile devices.",
+        solution: "Developed custom states in Flutter with a clean UI designed in Android Studio. Integrated MySQL for transaction tables and secure endpoints for tracking and state updates.",
+        techStack: ["FLUTTER", "ANDROID STUDIO", "MYSQL"],
+        demoLink: "#"
+    },
+    tiket_wisata_lembah_hijau: {
+        title: "Aplikasi Pemesanan Tiket Wisata Lembah Hijau",
+        subtitle: "Tourism Ticket Booking Mobile App",
+        image: "PROJEK/Aplikasi Pemesanan Tiket Wisata Lembah Hijau.jpg",
+        description: "Aplikasi pemesanan tiket wisata berbasis mobile untuk Lembah Hijau. Memudahkan pengguna memesan tiket masuk, mengecek ketersediaan tiket, melihat informasi wahana secara langsung, dan mendapatkan tiket digital.",
+        features: [
+            "Real-time ticket availability and booking portal.",
+            "Interactive information on zoo and waterpark attractions.",
+            "Automated digital ticket generation with simulated scanner support.",
+            "Secure purchase transaction records and payment integration simulation."
+        ],
+        challenge: "Managing booking statuses and synchronized database operations to prevent overselling of entry tickets during peak holiday periods.",
+        solution: "Built a fully responsive front-end dashboard inside Flutter, linking with MySQL database backends utilizing transactional locks to ensure concurrency safety.",
+        techStack: ["FLUTTER", "ANDROID STUDIO", "MYSQL"],
+        demoLink: "#"
+    },
+    edukasi_buah_arvr: {
+        title: "Edukasi Buah buahan Melalui ARVR (Augmented Reality Virtual Reality) 3D MODEL",
+        subtitle: "Interactive 3D AR/VR Educational Tool",
+        image: "PROJEK/Edukasi Buah buahan Melalui ARVR (Augmented Reality Virtual Reality) 3D MODEL .jpg",
+        description: "Aplikasi edukasi buah-buahan berbasis Augmented Reality (AR) dan Virtual Reality (VR) dengan model 3D interaktif. Membantu pengguna, khususnya anak-anak, mengenali jenis buah, visualisasi 3D, serta informasi gizi secara imersif.",
+        features: [
+            "High-fidelity interactive 3D fruit models designed for children.",
+            "Augmented reality layout projecting assets directly into current real-world environment.",
+            "Educational trivia facts, nutrition insights, and pronunciations.",
+            "Interactive mini-game quizzes to gauge retention."
+        ],
+        challenge: "Optimizing multiple high-detail 3D fruit assets to render seamlessly on standard mobile devices without lag.",
+        solution: "Modelled and optimized low-poly fruit representations using Blender, importing them into Unity and using Vuforia SDK for fluid AR tracking and stable VR viewport rendering.",
+        techStack: ["UNITY 3D", "BLENDER 3D", "C#", "AUGMENTED REALITY"],
+        demoLink: "#"
+    },
     bensburger: {
         title: "Ben's Burger",
         subtitle: "Cafe Promotion & Order Web",
