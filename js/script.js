@@ -345,55 +345,87 @@ function openProjectModal(projectId) {
     const data = projectDetailsData[projectId];
     if (!data) return;
 
+    // Determine category label
+    let categoryLabel = "WEB PROJECT";
+    if (projectId === 'jastipin' || projectId === 'tiket_wisata_lembah_hijau') {
+        categoryLabel = "MOBILE APP PROJECT";
+    } else if (projectId === 'edukasi_buah_arvr') {
+        categoryLabel = "AR/VR GAME PROJECT";
+    } else if (projectId === 'seaheroes') {
+        categoryLabel = "WEB GAME PROJECT";
+    } else if (projectId === 'desain_game_blender') {
+        categoryLabel = "3D MODELING PROJECT";
+    } else if (projectId === 'uiux_figma') {
+        categoryLabel = "UI/UX DESIGN PROJECT";
+    }
+
     // Generate tech stack badges HTML
-    const techBadgesHTML = data.techStack.map(tech => `<span class="tech-badge">${tech}</span>`).join('');
+    const techBadgesHTML = data.techStack.map(tech => `<span class="modal-tech-tag">${tech}</span>`).join('');
     
-    // Generate features list HTML
-    const featuresListHTML = data.features.map(feature => `<li><i class="fa-solid fa-circle-check"></i> <span>${feature}</span></li>`).join('');
+    // Generate features list HTML with ↗ arrow
+    const featuresListHTML = data.features.map(feature => `
+        <div class="modal-feature-item">
+            <span class="feature-arrow">↗</span>
+            <span class="feature-text">${feature}</span>
+        </div>
+    `).join('');
 
     // Generate Demo Link button conditionally
-    const demoButtonHTML = (data.demoLink && data.demoLink !== '#') ? `
-        <a href="${data.demoLink}" target="_blank" class="modal-btn modal-btn-primary">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> ${projectId === 'seaheroes' ? 'Play Game' : 'Live Demo'}
+    const viewableProjects = ['bensburger', 'seaheroes', 'breadgift'];
+    const hasDemoLink = viewableProjects.includes(projectId) && data.demoLink && data.demoLink !== '#';
+    
+    const demoButtonHTML = hasDemoLink ? `
+        <a href="${data.demoLink}" target="_blank" class="modal-btn-view">
+            View project <span class="btn-arrow">↗</span>
         </a>
+    ` : '';
+
+    const actionsHTML = demoButtonHTML ? `
+        <div class="modal-project-actions">
+            ${demoButtonHTML}
+        </div>
     ` : '';
 
     // Generate modal content
     modalBody.innerHTML = `
-        <div class="modal-project-header">
-            <h2>${data.title}</h2>
-            <h4>${data.subtitle}</h4>
-        </div>
-        <img class="modal-project-img" src="${data.image}" alt="${data.title}">
-        
-        <div class="modal-project-info-grid">
-            <div class="modal-left">
-                <div class="modal-section-title">Project Overview</div>
-                <p class="modal-text">${data.description}</p>
-                
-                <div class="modal-section-title">Key Features</div>
-                <ul class="modal-features-list">
-                    ${featuresListHTML}
-                </ul>
- 
-                <div class="modal-section-title">Challenge</div>
-                <p class="modal-text">${data.challenge}</p>
- 
-                <div class="modal-section-title">Solution</div>
-                <p class="modal-text">${data.solution}</p>
-            </div>
+        <div class="modal-project-wrapper">
             
-            <div class="modal-sidebar">
-                <div class="modal-section-title">Technologies Used</div>
-                <div class="modal-tech-stack">
-                    ${techBadgesHTML}
+            <div class="modal-project-columns">
+                <!-- Left side: Image/Visual -->
+                <div class="modal-project-visual">
+                    <img class="modal-project-img-new" src="${data.image}" alt="${data.title}">
                 </div>
                 
-                <div class="modal-actions">
-                    ${demoButtonHTML}
-                    <button onclick="closeProjectModal()" class="modal-btn modal-btn-secondary">
-                        Close
-                    </button>
+                <!-- Right side: Info details -->
+                <div class="modal-project-info">
+                    <span class="modal-project-category">* FEATURED ${categoryLabel}</span>
+                    <h2 class="modal-project-title">${data.title}</h2>
+                    <p class="modal-project-desc">${data.description}</p>
+                    
+                    <div class="modal-project-tech-tags">
+                        ${techBadgesHTML}
+                    </div>
+                    
+                    <div class="modal-project-features-grid">
+                        ${featuresListHTML}
+                    </div>
+                    
+                    ${actionsHTML}
+                </div>
+            </div>
+            
+            <!-- Bottom details: Challenge & Solution -->
+            <div class="modal-project-extra-details">
+                <div class="extra-detail-divider"></div>
+                <div class="extra-detail-grid">
+                    <div class="extra-detail-block">
+                        <div class="extra-detail-title"><span class="arrow-green">↗</span> The Challenge</div>
+                        <p class="extra-detail-text">${data.challenge}</p>
+                    </div>
+                    <div class="extra-detail-block">
+                        <div class="extra-detail-title"><span class="arrow-green">↗</span> The Solution</div>
+                        <p class="extra-detail-text">${data.solution}</p>
+                    </div>
                 </div>
             </div>
         </div>
