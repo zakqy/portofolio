@@ -98,7 +98,7 @@ AOS.init({
 // TYPEWRITER EFFECT
 const typewriterElement = document.getElementById('typewriter');
 const words = [
-    "Informatics Graduate",
+    "Informatics Fresh Graduate",
     "Web Developer",
     "Junior Game Designer"
 ];
