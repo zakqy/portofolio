@@ -53,13 +53,13 @@ document.querySelectorAll('header ul li a').forEach(link => {
 });
 
 // CERTIFICATES FILTER SYSTEM
-const filterButtons = document.querySelectorAll('.filter-btn');
-const certificateCards = document.querySelectorAll('.field-certificate');
+const certFilterButtons = document.querySelectorAll('.certificate-filters .filter-btn');
+const certificateCards = document.querySelectorAll('.container-certificate .field-certificate');
 
-filterButtons.forEach(button => {
+certFilterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Remove active class from all buttons
-        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Remove active class from all buttons in cert filters
+        certFilterButtons.forEach(btn => btn.classList.remove('active'));
         
         // Add active class to clicked button
         button.classList.add('active');
@@ -67,6 +67,42 @@ filterButtons.forEach(button => {
         const filterValue = button.getAttribute('data-filter');
         
         certificateCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            
+            // Fade out animation transition
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.8)';
+            
+            setTimeout(() => {
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    card.style.display = 'flex';
+                    // Trigger reflow
+                    card.offsetHeight; 
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1)';
+                } else {
+                    card.style.display = 'none';
+                }
+            }, 300);
+        });
+    });
+});
+
+// SKILLS FILTER SYSTEM
+const skillFilterButtons = document.querySelectorAll('.skill-filters .filter-btn');
+const skillCards = document.querySelectorAll('.container-image-skill .field-image-skill');
+
+skillFilterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons in skill filters
+        skillFilterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        const filterValue = button.getAttribute('data-filter');
+        
+        skillCards.forEach(card => {
             const cardCategory = card.getAttribute('data-category');
             
             // Fade out animation transition
@@ -469,3 +505,11 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(typeWriter, 1000);
     }
 });
+
+// Refresh AOS positions once all assets/images are loaded
+window.addEventListener('load', () => {
+    if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+    }
+});
+

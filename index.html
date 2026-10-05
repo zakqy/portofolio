@@ -43,14 +43,54 @@
             <div class="field-text-home" data-aos="fade-right" data-aos-duration="1200">
                 <h1>Hii, I am <br> <span>Muhammad Zakqy Al Farizi</span></h1>
                 <h3><span id="typewriter">Informatics Fresh Graduate</span><span class="typewriter-cursor">|</span></h3>
-                <div class="hero-actions">
-                    <a href="CV ATS MUHAMMAD ZAKQY AL FARIZI.pdf" target="_blank" class="btn-primary"><i
-                            class="fa-solid fa-file-invoice"></i> View CV / Resume</a>
-                    <div class="hero-socials">
-                        <a href="https://www.linkedin.com/in/mzakqyalfarizi/" target="_blank" title="LinkedIn"><i
-                                class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/zakzakqy/" target="_blank" title="Instagram"><i
-                                class="fa-brands fa-instagram"></i></a>
+                <!-- HERO BUTTONS -->
+                <div class="hero-btn-group">
+                    <a href="CV ATS MUHAMMAD ZAKQY AL FARIZI.pdf" target="_blank" class="btn-hero-cv">
+                        <i class="fa-solid fa-file-lines"></i> Curriculum Vitae
+                    </a>
+                    <a href="#project" class="btn-hero-projects">
+                        <i class="fa-solid fa-gear"></i> View Projects
+                    </a>
+                </div>
+
+                <!-- HERO STATS CARD -->
+                <div class="hero-stats-card">
+                    <div class="stat-col">
+                        <div class="stat-val-wrapper">
+                            <span class="stat-value">3.54</span><span class="stat-sub">/4.00</span>
+                        </div>
+                        <span class="stat-label">BACHELOR GPA</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-col">
+                        <div class="stat-val-wrapper">
+                            <span class="stat-value">29+</span>
+                        </div>
+                        <span class="stat-label">CERTIFICATES</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-col">
+                        <div class="stat-val-wrapper">
+                            <span class="stat-value">10+</span>
+                        </div>
+                        <span class="stat-label">REAL PROJECTS</span>
+                    </div>
+                </div>
+
+                <!-- HERO CONNECT & LOCATION -->
+                <div class="hero-connect-bar">
+                    <span class="connect-title">Connect:</span>
+                    <div class="connect-socials">
+                        <a href="https://www.linkedin.com/in/mzakqyalfarizi/" target="_blank" class="connect-btn linkedin-btn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/zakzakqy/" target="_blank" class="connect-btn instagram-btn" title="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="hero-location-badge">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Bandar Lampung, Indonesia</span>
                     </div>
                 </div>
             </div>
@@ -151,62 +191,332 @@
 
     <!-- SKILLS SECTION -->
     <section class="skill" id="skill">
-        <h1 data-aos="fade-up">My <span>Skills</span></h1>
+        <h1 data-aos="fade-up">My <span>Skills</span> <span class="cert-count-badge">42</span></h1>
+
+        <!-- Skill Filters -->
+        <div class="skill-filters" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="all">All <span class="filter-count">42</span></button>
+            <button class="filter-btn" data-filter="web">Web & Mobile <span class="filter-count">14</span></button>
+            <button class="filter-btn" data-filter="ai">AI & Data <span class="filter-count">8</span></button>
+            <button class="filter-btn" data-filter="design">Design & Games <span class="filter-count">9</span></button>
+            <button class="filter-btn" data-filter="systems">Systems & Security <span class="filter-count">6</span></button>
+            <button class="filter-btn" data-filter="management">Management & Others <span class="filter-count">5</span></button>
+        </div>
+
         <div class="container-image-skill">
-            <div class="field-image-skill" data-aos="zoom-in" data-aos-delay="100">
+            <!-- 1. HTML -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="50">
                 <img src="img/logo_html.png" alt="HTML" class="image-skill">
                 <span>HTML</span>
                 <p class="skill-desc">Web Structure</p>
             </div>
-            <div class="field-image-skill" data-aos="zoom-in" data-aos-delay="200">
+            <!-- 2. CSS -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="100">
                 <img src="img/logo_css.png" alt="CSS" class="image-skill">
                 <span>CSS</span>
                 <p class="skill-desc">Web Styling</p>
             </div>
-            <div class="field-image-skill" data-aos="zoom-in" data-aos-delay="300">
+            <!-- 3. JAVASCRIPT -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="150">
                 <img src="img/logo_javascript.png" alt="JavaScript" class="image-skill">
                 <span>JAVASCRIPT</span>
                 <p class="skill-desc">Web Interactivity</p>
             </div>
-            <div class="field-image-skill" data-aos="zoom-in" data-aos-delay="400">
+            <!-- 4. PHP -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="200">
                 <img src="img/logo_php.png" alt="PHP" class="image-skill">
                 <span>PHP</span>
                 <p class="skill-desc">Backend Logic</p>
             </div>
-            <div class="field-image-skill" data-aos="zoom-in" data-aos-delay="500">
+            <!-- 5. SQL -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="250">
                 <img src="img/logo_sql.png" alt="SQL" class="image-skill">
                 <span>SQL</span>
                 <p class="skill-desc">Database Querying</p>
             </div>
-            <div class="field-image-skill" data-aos="zoom-in" data-aos-delay="600">
+            <!-- 6. TAILWIND -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="300">
                 <img src="img/logo_talwind.png" alt="Tailwind" class="image-skill">
                 <span>TAILWIND</span>
                 <p class="skill-desc">CSS Framework</p>
             </div>
-            <div class="field-image-skill" data-aos="zoom-in" data-aos-delay="700">
+            <!-- 7. REACT JS -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="350">
                 <img src="img/logo_reactjs.png" alt="ReactJS" class="image-skill">
                 <span>REACT JS</span>
                 <p class="skill-desc">Frontend Library</p>
             </div>
-            <div class="field-image-skill" data-aos="zoom-in" data-aos-delay="800">
+            <!-- 8. NEXT JS -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="400">
                 <img src="img/nextjs.png" alt="NextJS" class="image-skill">
                 <span>NEXT JS</span>
                 <p class="skill-desc">React Framework</p>
             </div>
-            <div class="field-image-skill" data-aos="zoom-in" data-aos-delay="900">
+            <!-- 9. GITHUB -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="450">
                 <img src="img/logo_github.png" alt="Github" class="image-skill">
                 <span>GITHUB</span>
                 <p class="skill-desc">Version Control</p>
             </div>
-            <div class="field-image-skill" data-aos="zoom-in" data-aos-delay="1000">
+            <!-- 10. FLUTTER -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="500">
                 <img src="img/flutter.png" alt="Flutter" class="image-skill">
                 <span>FLUTTER</span>
                 <p class="skill-desc">Mobile Framework</p>
             </div>
-            <div class="field-image-skill" data-aos="zoom-in" data-aos-delay="1100">
+            <!-- 11. PYTHON -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="550">
                 <img src="img/python.png" alt="Python" class="image-skill">
                 <span>PYTHON</span>
                 <p class="skill-desc">Programming Language</p>
+            </div>
+
+            <!-- CERTIFICATE 1: Junior Web Developer -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fa-solid fa-laptop-code skill-icon-fa c-teal"></i>
+                <span>WEB DEVELOPMENT</span>
+                <p class="skill-desc">Responsive Web Apps</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 2: Basic Software Engineering -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="150">
+                <i class="fa-solid fa-code skill-icon-fa c-indigo"></i>
+                <span>SOFTWARE ENGR.</span>
+                <p class="skill-desc">SDLC & System Architecture</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 3: Service Oriented Programmer -->
+            <div class="field-image-skill" data-category="web" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-solid fa-cloud-arrow-up skill-icon-fa c-sky"></i>
+                <span>REST API & SERVICES</span>
+                <p class="skill-desc">Service-Oriented Architecture</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 4: Basic Artificial Intelligence -->
+            <div class="field-image-skill" data-category="ai" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fa-solid fa-brain skill-icon-fa c-cyan"></i>
+                <span>ARTIFICIAL INTELLIGENCE</span>
+                <p class="skill-desc">AI Fundamentals & Theories</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 5: Dasar-Dasar Implementasi Kecerdasan Artifisial -->
+            <div class="field-image-skill" data-category="ai" data-aos="zoom-in" data-aos-delay="150">
+                <i class="fa-solid fa-robot skill-icon-fa c-teal"></i>
+                <span>AI IMPLEMENTATION</span>
+                <p class="skill-desc">Intelligent Models & Agents</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 6: Linear Models in Machine Learning -->
+            <div class="field-image-skill" data-category="ai" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-solid fa-chart-line skill-icon-fa c-emerald"></i>
+                <span>MACHINE LEARNING</span>
+                <p class="skill-desc">Linear & Predictive Models</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 7: Data Analyst -->
+            <div class="field-image-skill" data-category="ai" data-aos="zoom-in" data-aos-delay="250">
+                <i class="fa-solid fa-chart-pie skill-icon-fa c-emerald"></i>
+                <span>DATA ANALYTICS</span>
+                <p class="skill-desc">Data Processing & Insights</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 8: Junior Information Retrieval Engineer -->
+            <div class="field-image-skill" data-category="ai" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fa-solid fa-magnifying-glass skill-icon-fa c-blue"></i>
+                <span>INFO RETRIEVAL I</span>
+                <p class="skill-desc">Search Engines & Indexing</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 9: Junior Information Retrieval Engineer II -->
+            <div class="field-image-skill" data-category="ai" data-aos="zoom-in" data-aos-delay="350">
+                <i class="fa-solid fa-magnifying-glass-chart skill-icon-fa c-blue"></i>
+                <span>INFO RETRIEVAL II</span>
+                <p class="skill-desc">Query Parsing & Ranking</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 10: Basic Informatics Logic -->
+            <div class="field-image-skill" data-category="ai" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fa-solid fa-calculator skill-icon-fa c-indigo"></i>
+                <span>INFORMATICS LOGIC</span>
+                <p class="skill-desc">Boolean Logic & Algorithms</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 11: Basic Information System -->
+            <div class="field-image-skill" data-category="ai" data-aos="zoom-in" data-aos-delay="450">
+                <i class="fa-solid fa-database skill-icon-fa c-amber"></i>
+                <span>INFORMATION SYSTEMS</span>
+                <p class="skill-desc">Data Flow & System Integration</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 12: Sertifikat Kompetensi Desain Grafis -->
+            <div class="field-image-skill" data-category="design" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fa-solid fa-palette skill-icon-fa c-purple"></i>
+                <span>GRAPHIC DESIGN</span>
+                <p class="skill-desc">Visual Layout & Digital Assets</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 13: Junior UX Designer -->
+            <div class="field-image-skill" data-category="design" data-aos="zoom-in" data-aos-delay="150">
+                <i class="fa-solid fa-compass-drafting skill-icon-fa c-rose"></i>
+                <span>UI / UX DESIGN</span>
+                <p class="skill-desc">User Flows & Wireframing</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 14: Junior UX Designer 2 -->
+            <div class="field-image-skill" data-category="design" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-solid fa-pen-nib skill-icon-fa c-rose"></i>
+                <span>UX RESEARCH & TESTING</span>
+                <p class="skill-desc">UI Prototyping & Feedback</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- DESIGN TOOL: FIGMA -->
+            <div class="field-image-skill" data-category="design" data-aos="zoom-in" data-aos-delay="250">
+                <i class="fa-brands fa-figma skill-icon-fa c-purple"></i>
+                <span>FIGMA</span>
+                <p class="skill-desc">High-Fidelity Prototyping</p>
+                <span class="skill-tool-tag"><i class="fa-solid fa-pen-ruler"></i> Design Tool</span>
+            </div>
+
+            <!-- CERTIFICATE 15: Junior Game Designer -->
+            <div class="field-image-skill" data-category="design" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fa-solid fa-gamepad skill-icon-fa c-violet"></i>
+                <span>GAME DESIGN & LOGIC</span>
+                <p class="skill-desc">Gameplay Mechanics & Rules</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 16: Senior Game Developer -->
+            <div class="field-image-skill" data-category="design" data-aos="zoom-in" data-aos-delay="350">
+                <i class="fa-brands fa-unity skill-icon-fa c-white"></i>
+                <span>UNITY 3D GAME DEV</span>
+                <p class="skill-desc">Game Physics & Engine Logic</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 17: SERTIFIKAT LOMBA ANIMASI (2nd Winner) -->
+            <div class="field-image-skill" data-category="design" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fa-solid fa-film skill-icon-fa c-orange"></i>
+                <span>3D ANIMATION</span>
+                <p class="skill-desc">3D Keyframing & Visual Story</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- 3D TOOL: BLENDER 3D -->
+            <div class="field-image-skill" data-category="design" data-aos="zoom-in" data-aos-delay="450">
+                <i class="fa-solid fa-cube skill-icon-fa c-orange"></i>
+                <span>BLENDER 3D</span>
+                <p class="skill-desc">3D Assets & Environment</p>
+                <span class="skill-tool-tag"><i class="fa-solid fa-shapes"></i> 3D Suite</span>
+            </div>
+
+            <!-- CERTIFICATE 18: Junior Video Editor -->
+            <div class="field-image-skill" data-category="design" data-aos="zoom-in" data-aos-delay="500">
+                <i class="fa-solid fa-video skill-icon-fa c-violet"></i>
+                <span>VIDEO EDITING</span>
+                <p class="skill-desc">Transitions & Color Grading</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 19: Jaringan Komputer dan Troubleshooting -->
+            <div class="field-image-skill" data-category="systems" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fa-solid fa-screwdriver-wrench skill-icon-fa c-blue"></i>
+                <span>NETWORKING & REPAIR</span>
+                <p class="skill-desc">LAN/WAN & Hardware Diagnostics</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 20: Sertifikat Pelatihan Mikrotik -->
+            <div class="field-image-skill" data-category="systems" data-aos="zoom-in" data-aos-delay="150">
+                <i class="fa-solid fa-server skill-icon-fa c-blue"></i>
+                <span>MIKROTIK ROUTEROS</span>
+                <p class="skill-desc">Routing, Bandwidth & Firewall</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 21: Parallel and Distributed Systems -->
+            <div class="field-image-skill" data-category="systems" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-solid fa-cubes skill-icon-fa c-teal"></i>
+                <span>DISTRIBUTED SYSTEMS</span>
+                <p class="skill-desc">Parallel Nodes & Cluster Computing</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 22: Computer Organization and Architecture -->
+            <div class="field-image-skill" data-category="systems" data-aos="zoom-in" data-aos-delay="250">
+                <i class="fa-solid fa-microchip skill-icon-fa c-amber"></i>
+                <span>COMPUTER ARCHITECTURE</span>
+                <p class="skill-desc">CPU Structure & Instruction Sets</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 23: Information Security -->
+            <div class="field-image-skill" data-category="systems" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fa-solid fa-shield-halved skill-icon-fa c-amber"></i>
+                <span>INFORMATION SECURITY</span>
+                <p class="skill-desc">Cryptography & Network Defense</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 24: Menjaga Data Pribadi dan Pelindungannya -->
+            <div class="field-image-skill" data-category="systems" data-aos="zoom-in" data-aos-delay="350">
+                <i class="fa-solid fa-user-shield skill-icon-fa c-emerald"></i>
+                <span>DATA PRIVACY & COMPLIANCE</span>
+                <p class="skill-desc">Data Rights & Privacy Defense</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 25: Software Project Manager -->
+            <div class="field-image-skill" data-category="management" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fa-solid fa-list-check skill-icon-fa c-teal"></i>
+                <span>PROJECT MANAGEMENT</span>
+                <p class="skill-desc">Agile, Sprints & Delivery</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 26: Technopreneurship -->
+            <div class="field-image-skill" data-category="management" data-aos="zoom-in" data-aos-delay="150">
+                <i class="fa-solid fa-lightbulb skill-icon-fa c-amber"></i>
+                <span>TECHNOPRENEURSHIP</span>
+                <p class="skill-desc">Digital Ventures & Startups</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 27: Komputer Administrasi Perkantoran -->
+            <div class="field-image-skill" data-category="management" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-solid fa-file-invoice skill-icon-fa c-indigo"></i>
+                <span>OFFICE ADMIN TOOLS</span>
+                <p class="skill-desc">Document & Digital Workflows</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 28: Sertifikat 2022PKKMB -->
+            <div class="field-image-skill" data-category="management" data-aos="zoom-in" data-aos-delay="250">
+                <i class="fa-solid fa-graduation-cap skill-icon-fa c-blue"></i>
+                <span>TEAM COLLABORATION</span>
+                <p class="skill-desc">Leadership & Campus Synergy</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
+            </div>
+
+            <!-- CERTIFICATE 29: Metaverse di Indonesia -->
+            <div class="field-image-skill" data-category="management" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fa-solid fa-vr-cardboard skill-icon-fa c-pink"></i>
+                <span>AR / VR & METAVERSE</span>
+                <p class="skill-desc">Virtual Spaces & Web3 101</p>
+                <span class="skill-cert-tag"><i class="fa-solid fa-certificate"></i> Certified</span>
             </div>
         </div>
     </section>
@@ -784,8 +1094,8 @@
 
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
-        <h1 data-aos="fade-up">Let's <span>Connect</span></h1>
-        <div class="container-contact" data-aos="fade-up" data-aos-duration="1200">
+        <h1>Let's <span>Connect</span></h1>
+        <div class="container-contact">
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/mzakqyalfarizi/" target="_blank" class="social-link linkedin">
                     <i class="fa-brands fa-linkedin"></i> LinkedIn
