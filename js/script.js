@@ -215,7 +215,7 @@ const projectDetailsData = {
         title: "Jastipin",
         subtitle: "Mobile Purchase & Delivery Service App",
         image: "PROJEK/Aplikasi Mobile Jastipin .jpg",
-        description: "Aplikasi titip beli barang berbasis mobile “Jastipin” dengan segala kepraktisannya, memfasilitasi koneksi kurir dengan pengguna, memungkinkan mengguna mencari barang yang diinginkan, mengetahui harga dan lokasi, serta memesan melalui aplikasi tersebut. Dan penyedia jasa bertugas membeli dan mengirimkan barang dengan biaya jasa.",
+        description: "A mobile-based purchase and delivery service application 'Jastipin' designed for maximum convenience, connecting couriers with users in real-time. Enables customers to search for desired items, verify prices and locations, and place purchase orders seamlessly with automated delivery fee calculations.",
         features: [
             "Courier and user connection channel for purchase requests.",
             "Item searching with price, location details, and ordering options.",
@@ -228,10 +228,10 @@ const projectDetailsData = {
         demoLink: "#"
     },
     tiket_wisata_lembah_hijau: {
-        title: "Aplikasi Pemesanan Tiket Wisata Lembah Hijau",
+        title: "Lembah Hijau Tourism Ticket Booking App",
         subtitle: "Tourism Ticket Booking Mobile App",
         image: "PROJEK/Aplikasi Pemesanan Tiket Wisata Lembah Hijau.jpg",
-        description: "Aplikasi pemesanan tiket wisata berbasis mobile untuk Lembah Hijau. Memudahkan pengguna memesan tiket masuk, mengecek ketersediaan tiket, melihat informasi wahana secara langsung, dan mendapatkan tiket digital.",
+        description: "A mobile-based tourism ticket reservation application for Lembah Hijau theme park. Enables visitors to conveniently book admissions tickets, check real-time ticket availability, explore attraction guides, and receive instant digital passes.",
         features: [
             "Real-time ticket availability and booking portal.",
             "Interactive information on zoo and waterpark attractions.",
@@ -244,10 +244,10 @@ const projectDetailsData = {
         demoLink: "#"
     },
     edukasi_buah_arvr: {
-        title: "Edukasi Buah buahan Melalui ARVR (Augmented Reality Virtual Reality) 3D MODEL",
+        title: "Interactive 3D AR/VR Fruit Education",
         subtitle: "Interactive 3D AR/VR Educational Tool",
         image: "PROJEK/Edukasi Buah buahan Melalui ARVR (Augmented Reality Virtual Reality) 3D MODEL .jpg",
-        description: "Aplikasi edukasi buah-buahan berbasis Augmented Reality (AR) dan Virtual Reality (VR) dengan model 3D interaktif. Membantu pengguna, khususnya anak-anak, mengenali jenis buah, visualisasi 3D, serta informasi gizi secara imersif.",
+        description: "An interactive educational application leveraging Augmented Reality (AR) and Virtual Reality (VR) with 3D models. Helps young learners identify fruit species, explore 3D anatomical structures, and discover essential nutritional facts immersively.",
         features: [
             "High-fidelity interactive 3D fruit models designed for children.",
             "Augmented reality layout projecting assets directly into current real-world environment.",
@@ -324,7 +324,7 @@ const projectDetailsData = {
         demoLink: "#"
     },
     tugas_semester_4: {
-        title: "Tugas Akhir Pemrograman Web 1",
+        title: "Web Programming Final Project 1",
         subtitle: "Academic Web Application",
         image: "PROJEK/tugas semester 4.png",
         description: "A front-end development project created to fulfill academic coursework, demonstrating core capabilities in user interface design and page responsiveness.",
@@ -340,7 +340,7 @@ const projectDetailsData = {
         demoLink: "#"
     },
     desain_game_blender: {
-        title: "Projek Els Coffee Roastery",
+        title: "El's Coffee Roastery 3D Project",
         subtitle: "3D Assets & Environment Modeling",
         image: "PROJEK/desain game.png",
         description: "An asset collection and detailed 3D environment modeling project, featuring high-quality models built specifically for game engine optimization.",
@@ -368,7 +368,7 @@ const projectDetailsData = {
         ],
         challenge: "Creating a navigation flow that is easy for new users to grasp, while maintaining an eye-catching, modern layout style.",
         solution: "Applied user testing cycles on mid-fidelity wireframes to identify bottlenecks, refining into final Figma layouts with strict design consistency.",
-        techStack: ["FIGMA", "Tugas Akhir Ui Ux", "PROTOTYPING"],
+        techStack: ["FIGMA", "UI/UX DESIGN", "PROTOTYPING"],
         demoLink: "#"
     }
 };
