@@ -23,7 +23,9 @@
 
     <!-- HEADER NAVBAR -->
     <header id="navbar">
-        <h2>Muhammad Zakqy Al Farizi</h2>
+        <a href="#home" class="nav-brand">
+            <h2>Muhammad Zakqy Al Farizi</h2>
+        </a>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -31,30 +33,49 @@
             <li><a href="#skill">Skills</a></li>
             <li><a href="#project">Projects</a></li>
             <li><a href="#certification">Certifications</a></li>
-            <li><a href="#contact">Socials</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li><a href="CV ATS MUHAMMAD ZAKQY AL FARIZI.pdf" target="_blank" class="nav-cv-btn"><i
-                        class="fa-solid fa-file-invoice"></i> CV / Resume</a></li>
+                        class="fa-solid fa-file-invoice"></i> CV</a></li>
         </ul>
-        <i class="fa-solid fa-bars fa-2x hamburger-menu"></i>
+        <div class="nav-right-actions">
+            <a href="https://www.instagram.com/zakzakqy/" target="_blank" class="nav-icon-link" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mzakqyalfarizi/" target="_blank" class="nav-icon-link" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <button class="nav-menu-btn hamburger-menu" aria-label="Menu Toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
     </header>
 
     <!-- HOME SECTION -->
     <section class="home" id="home">
-        <div class="section-home">
-            <div class="field-text-home" data-aos="fade-right" data-aos-duration="1200">
-                <h1>Hii, I am <br> <span>Muhammad Zakqy Al Farizi</span></h1>
-                <h3><span id="typewriter">Informatics Fresh Graduate</span><span class="typewriter-cursor">|</span></h3>
-                <!-- HERO BUTTONS -->
-                <div class="hero-btn-group">
-                    <a href="CV ATS MUHAMMAD ZAKQY AL FARIZI.pdf" target="_blank" class="btn-hero-cv">
-                        <i class="fa-solid fa-file-lines"></i> Curriculum Vitae
+        <!-- Ambient Outline Typography Watermark -->
+        <div class="hero-outline-watermark" aria-hidden="true">
+            <span>INFORMATICS GRADUATE</span>
+        </div>
+
+        <div class="hero-container">
+            <!-- LEFT COLUMN: Greeting, Name, CTA Button -->
+            <div class="hero-col hero-col-left" data-aos="fade-right" data-aos-duration="1200">
+                <div class="hero-kicker">HELLO, I AM</div>
+                <h1 class="hero-name">
+                    Muhammad<br>
+                    Zakqy Al<br>
+                    Farizi
+                </h1>
+                <div class="hero-cta-wrapper">
+                    <a href="#about" class="btn-tentang-saya">
+                        About Me <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="#project" class="btn-hero-projects">
-                        <i class="fa-solid fa-gear"></i> View Projects
+                    <a href="CV ATS MUHAMMAD ZAKQY AL FARIZI.pdf" target="_blank" class="btn-hero-cv-pill" title="Curriculum Vitae">
+                        <i class="fa-solid fa-file-invoice"></i> CV
                     </a>
                 </div>
 
-                <!-- HERO STATS CARD -->
+                <!-- HERO STATS CARD (Preserved as requested) -->
                 <div class="hero-stats-card">
                     <div class="stat-col">
                         <div class="stat-val-wrapper">
@@ -78,7 +99,7 @@
                     </div>
                 </div>
 
-                <!-- HERO CONNECT & LOCATION -->
+                <!-- HERO CONNECT & LOCATION (Preserved as requested) -->
                 <div class="hero-connect-bar">
                     <span class="connect-title">Connect:</span>
                     <div class="connect-socials">
@@ -95,17 +116,62 @@
                     </div>
                 </div>
             </div>
-            <div class="field-image-home" data-aos="fade-left" data-aos-duration="1200">
-                <div class="image-glow-wrapper">
-                    <!-- Point to correct folder poto profile -->
-                    <img src="poto profile/pp website.png" alt="Muhammad Zakqy Al Farizi">
+
+            <!-- CENTER COLUMN: Transparent Profile Photo with Blue Aura -->
+            <div class="hero-col hero-col-center" data-aos="fade-up" data-aos-duration="1200">
+                <div class="hero-photo-stage">
+                    <div class="hero-aura-glow"></div>
+                    <img src="poto profile/poto transparant.png" alt="Muhammad Zakqy Al Farizi" class="hero-transparent-photo">
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Core Specialization & Focus -->
+            <div class="hero-col hero-col-right" data-aos="fade-left" data-aos-duration="1200">
+                <div class="hero-focus-box">
+                    <div class="focus-badge"><i class="fa-solid fa-code"></i> Specialization</div>
+                    <h3 class="focus-title">Core Focus</h3>
+                    <p class="focus-subtitle">
+                        Building modern digital solutions, cross-platform mobile apps, and intelligent system integrations.
+                    </p>
+                    
+                    <div class="hero-focus-list">
+                        <div class="hero-focus-item">
+                            <div class="focus-icon-wrap"><i class="fa-solid fa-globe"></i></div>
+                            <div class="focus-item-info">
+                                <span class="focus-name">Full-Stack Web</span>
+                                <span class="focus-desc">React, Next.js, PHP, Tailwind</span>
+                            </div>
+                        </div>
+                        <div class="hero-focus-item">
+                            <div class="focus-icon-wrap"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <div class="focus-item-info">
+                                <span class="focus-name">Mobile Apps</span>
+                                <span class="focus-desc">Flutter & Cross-Platform</span>
+                            </div>
+                        </div>
+                        <div class="hero-focus-item">
+                            <div class="focus-icon-wrap"><i class="fa-solid fa-brain"></i></div>
+                            <div class="focus-item-info">
+                                <span class="focus-name">AI & Data Analytics</span>
+                                <span class="focus-desc">Machine Learning & Python</span>
+                            </div>
+                        </div>
+                        <div class="hero-focus-item">
+                            <div class="focus-icon-wrap"><i class="fa-solid fa-cubes"></i></div>
+                            <div class="focus-item-info">
+                                <span class="focus-name">3D & Interactive Media</span>
+                                <span class="focus-desc">Unity 3D, Blender & AR</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#project" class="hero-explore-btn">
+                        <span>View Project Portfolio</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
-        <a class="swipe-up" href="#about">
-            <span>Swipe Up</span>
-            <i class="fa-solid fa-arrow-down arrow-swipeup"></i>
-        </a>
     </section>
 
     <!-- ABOUT SECTION -->

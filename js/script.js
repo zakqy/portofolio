@@ -30,27 +30,33 @@ backToTopBtn.addEventListener('click', () => {
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const navLinks = document.querySelector('header ul');
 
-hamburgerMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('ul-active');
-    
-    // Toggle hamburger icon between bars and cross (fa-bars / fa-xmark)
-    if (navLinks.classList.contains('ul-active')) {
-        hamburgerMenu.classList.remove('fa-bars');
-        hamburgerMenu.classList.add('fa-xmark');
-    } else {
-        hamburgerMenu.classList.remove('fa-xmark');
-        hamburgerMenu.classList.add('fa-bars');
-    }
-});
+if (hamburgerMenu && navLinks) {
+    const getMenuIcon = () => hamburgerMenu.querySelector('i') || hamburgerMenu;
 
-// Close nav menu on clicking any link and restore hamburger icon
-document.querySelectorAll('header ul li a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('ul-active');
-        hamburgerMenu.classList.remove('fa-xmark');
-        hamburgerMenu.classList.add('fa-bars');
+    hamburgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('ul-active');
+        const icon = getMenuIcon();
+        
+        // Toggle hamburger icon between bars and cross (fa-bars / fa-xmark)
+        if (navLinks.classList.contains('ul-active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-xmark');
+        } else {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+        }
     });
-});
+
+    // Close nav menu on clicking any link and restore hamburger icon
+    document.querySelectorAll('header ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('ul-active');
+            const icon = getMenuIcon();
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+        });
+    });
+}
 
 // CERTIFICATES FILTER SYSTEM
 const certFilterButtons = document.querySelectorAll('.certificate-filters .filter-btn');
