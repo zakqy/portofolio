@@ -317,29 +317,6 @@ section.home,
     pointer-events: none;
     z-index: 1;
 }
-/* Bold Backdrop Typography Behind Profile Photo (Egypt/Winzy Reference) */
-.hero-backdrop-text {
-    position: absolute;
-    top: 36%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Outfit', sans-serif;
-    font-size: clamp(4.2rem, 8.5vw, 8.8rem);
-    font-weight: 900;
-    letter-spacing: clamp(3px, 0.8vw, 8px);
-    text-transform: uppercase;
-    white-space: nowrap;
-    pointer-events: none;
-    user-select: none;
-    z-index: 2;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0.12) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    line-height: 1;
-    text-align: center;
-    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.55));
-    transition: all 0.3s ease;
-}
 
 /* 3-Column Layout */
 .hero-container {
@@ -2254,12 +2231,6 @@ footer {
         margin: 0 auto;
     }
 
-    .hero-backdrop-text {
-        font-size: clamp(2.4rem, 9.5vw, 4.4rem);
-        top: 34%;
-        letter-spacing: 3px;
-    }
-    
     section:not(.home) {
         padding: 60px 24px;
     }
