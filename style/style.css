@@ -317,35 +317,28 @@ section.home,
     pointer-events: none;
     z-index: 1;
 }
-
-/* Large Background Outline Typography */
-.hero-outline-watermark {
+/* Bold Backdrop Typography Behind Profile Photo (Egypt/Winzy Reference) */
+.hero-backdrop-text {
     position: absolute;
-    bottom: 12px;
+    top: 36%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-    pointer-events: none;
-    user-select: none;
-    z-index: 1;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.hero-outline-watermark span {
+    transform: translate(-50%, -50%);
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(2rem, 4.8vw, 4.5rem);
+    font-size: clamp(4.2rem, 8.5vw, 8.8rem);
     font-weight: 900;
-    letter-spacing: 0.08em;
+    letter-spacing: clamp(3px, 0.8vw, 8px);
     text-transform: uppercase;
     white-space: nowrap;
-    color: transparent;
-    -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.08);
-    opacity: 0.8;
-    display: inline-block;
-    line-height: 1.1;
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0.12) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    text-align: center;
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.55));
+    transition: all 0.3s ease;
 }
 
 /* 3-Column Layout */
@@ -2261,13 +2254,10 @@ footer {
         margin: 0 auto;
     }
 
-    .hero-outline-watermark span {
-        font-size: clamp(1.2rem, 5.5vw, 2.2rem);
-        letter-spacing: 0.05em;
-    }
-
-    .home .swipe-up {
-        display: none;
+    .hero-backdrop-text {
+        font-size: clamp(2.4rem, 9.5vw, 4.4rem);
+        top: 34%;
+        letter-spacing: 3px;
     }
     
     section:not(.home) {
