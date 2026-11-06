@@ -279,6 +279,44 @@ header ul li a.nav-cv-btn:hover {
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
 }
 
+header ul li .nav-pdf-btn {
+    color: #ffffff;
+    background: rgba(6, 182, 212, 0.12);
+    border: 1px solid rgba(6, 182, 212, 0.4);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.15);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+header ul li .nav-pdf-btn::after {
+    display: none;
+}
+
+header ul li .nav-pdf-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(6, 182, 212, 0.3);
+    border-color: var(--accent-teal);
+    box-shadow: 0 6px 20px rgba(6, 182, 212, 0.35);
+}
+
+header ul li .nav-pdf-btn i {
+    color: var(--accent-teal);
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+header ul li .nav-pdf-btn:hover i {
+    transform: scale(1.15);
+}
+
 .hamburger-menu {
     display: none;
 }
@@ -424,6 +462,44 @@ section.home,
     background: rgba(255, 255, 255, 0.16);
     border-color: #ffffff;
     transform: translateY(-3px);
+}
+
+/* Hero PDF Button */
+.btn-hero-pdf-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(99, 102, 241, 0.2));
+    border: 1px solid rgba(6, 182, 212, 0.5);
+    color: #ffffff !important;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.2);
+}
+
+.btn-hero-pdf-pill i {
+    color: var(--accent-teal);
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.btn-hero-pdf-pill:hover {
+    background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(6, 182, 212, 0.4);
+}
+
+.btn-hero-pdf-pill:hover i {
+    color: #ffffff;
+    transform: scale(1.15);
 }
 
 /* CENTER COLUMN (Transparent Photo & Glow) */
@@ -2809,6 +2885,11 @@ footer {
     .nav-right-actions,
     .back-to-top,
     .blob,
+    .nav-pdf-btn,
+    .btn-hero-pdf-pill,
+    .btn-hero-cv-pill,
+    .btn-tentang-saya,
+    .hero-cta-wrapper,
     .project-filters,
     .skill-filters,
     .certificate-filters,
