@@ -140,7 +140,7 @@ AOS.init({
 // TYPEWRITER EFFECT
 const typewriterElement = document.getElementById('typewriter');
 const words = [
-    "Informatics Fresh Graduate",
+    "Lulusan Baru Informatika",
     "Web Developer",
     "Junior Game Designer"
 ];
@@ -215,165 +215,165 @@ projectFilterButtons.forEach(button => {
     });
 });
 
-// PROJECT DETAILS DATA
+// PROJECT DETAILS DATA (Bahasa Indonesia)
 const projectDetailsData = {
     jastipin: {
         title: "Jastipin",
-        subtitle: "Mobile Purchase & Delivery Service App",
+        subtitle: "Aplikasi Layanan Jasa Titip & Pengantaran Mobile",
         image: "PROJEK/Aplikasi Mobile Jastipin .jpg",
-        description: "A mobile-based purchase and delivery service application 'Jastipin' designed for maximum convenience, connecting couriers with users in real-time. Enables customers to search for desired items, verify prices and locations, and place purchase orders seamlessly with automated delivery fee calculations.",
+        description: "Aplikasi layanan jasa titip dan pengantaran berbasis mobile 'Jastipin' yang dirancang untuk kenyamanan maksimal, menghubungkan kurir dengan pengguna secara langsung. Memungkinkan pelanggan mencari barang yang diinginkan, memverifikasi harga dan lokasi, serta membuat pesanan titipan secara praktis dengan kalkulasi ongkos kirim otomatis.",
         features: [
-            "Courier and user connection channel for purchase requests.",
-            "Item searching with price, location details, and ordering options.",
-            "Direct courier routing and order handling system.",
-            "Custom pricing calculator based on delivery fee and item price."
+            "Saluran komunikasi langsung antara kurir dan pengguna untuk permintaan barang titipan.",
+            "Pencarian barang lengkap dengan rincian harga, lokasi toko, dan opsi pemesanan.",
+            "Sistem penanganan pesanan dan rute pengantaran kurir langsung.",
+            "Kalkulator tarif kustom berdasarkan biaya pengantaran dan harga barang."
         ],
-        challenge: "Connecting couriers with users in real-time, managing transaction states, and handling database queries securely across mobile devices.",
-        solution: "Developed custom states in Flutter with a clean UI designed in Android Studio. Integrated MySQL for transaction tables and secure endpoints for tracking and state updates.",
+        challenge: "Menghubungkan kurir dengan pengguna secara real-time, mengelola status transaksi yang dinamis, dan menangani query basis data secara aman di berbagai perangkat mobile.",
+        solution: "Mengembangkan state management kustom di Flutter dengan tampilan antarmuka bersih yang dirancang di Android Studio. Mengintegrasikan MySQL untuk tabel transaksi serta endpoint yang aman untuk pelacakan status pesanan.",
         techStack: ["FLUTTER", "ANDROID STUDIO", "MYSQL"],
         demoLink: "#"
     },
     tiket_wisata_lembah_hijau: {
-        title: "Lembah Hijau Tourism Ticket Booking App",
-        subtitle: "Tourism Ticket Booking Mobile App",
+        title: "Aplikasi Pemesanan Tiket Wisata Lembah Hijau",
+        subtitle: "Aplikasi Mobile Pemesanan Tiket Wisata",
         image: "PROJEK/Aplikasi Pemesanan Tiket Wisata Lembah Hijau.jpg",
-        description: "A mobile-based tourism ticket reservation application for Lembah Hijau theme park. Enables visitors to conveniently book admissions tickets, check real-time ticket availability, explore attraction guides, and receive instant digital passes.",
+        description: "Aplikasi reservasi tiket wisata berbasis mobile untuk taman wisata Lembah Hijau. Memungkinkan pengunjung memesan tiket masuk dengan mudah, mengecek ketersediaan tiket secara real-time, menjelajahi panduan wahana, dan menerima tiket digital instan.",
         features: [
-            "Real-time ticket availability and booking portal.",
-            "Interactive information on zoo and waterpark attractions.",
-            "Automated digital ticket generation with simulated scanner support.",
-            "Secure purchase transaction records and payment integration simulation."
+            "Portal pemesanan dan pengecekan ketersediaan kuota tiket secara real-time.",
+            "Informasi interaktif seputar wahana kebun binatang dan waterpark.",
+            "Pembuatan e-ticket otomatis dengan dukungan simulasi scan barcode/QR code.",
+            "Pencatatan riwayat transaksi pembelian dan simulasi pembayaran terintegrasi."
         ],
-        challenge: "Managing booking statuses and synchronized database operations to prevent overselling of entry tickets during peak holiday periods.",
-        solution: "Built a fully responsive front-end dashboard inside Flutter, linking with MySQL database backends utilizing transactional locks to ensure concurrency safety.",
+        challenge: "Mengelola sinkronisasi status pemesanan tiket pada basis data secara aman guna mencegah kelebihan penjualan (overselling) tiket masuk pada hari libur ramai.",
+        solution: "Membangun dashboard front-end responsif di Flutter yang terhubung dengan backend database MySQL menggunakan transactional lock untuk menjaga keamanan konkurensi data.",
         techStack: ["FLUTTER", "ANDROID STUDIO", "MYSQL"],
         demoLink: "#"
     },
     edukasi_buah_arvr: {
-        title: "Interactive 3D AR/VR Fruit Education",
-        subtitle: "Interactive 3D AR/VR Educational Tool",
+        title: "Edukasi Buah Interaktif 3D AR/VR",
+        subtitle: "Media Edukasi Interaktif 3D AR/VR",
         image: "PROJEK/Edukasi Buah buahan Melalui ARVR (Augmented Reality Virtual Reality) 3D MODEL .jpg",
-        description: "An interactive educational application leveraging Augmented Reality (AR) and Virtual Reality (VR) with 3D models. Helps young learners identify fruit species, explore 3D anatomical structures, and discover essential nutritional facts immersively.",
+        description: "Aplikasi edukasi interaktif yang memanfaatkan Augmented Reality (AR) dan Virtual Reality (VR) dengan model 3D. Membantu anak-anak dan pelajar mengenal berbagai jenis buah, mempelajari struktur visual 3D, dan memahami informasi nutrisi penting secara imersif.",
         features: [
-            "High-fidelity interactive 3D fruit models designed for children.",
-            "Augmented reality layout projecting assets directly into current real-world environment.",
-            "Educational trivia facts, nutrition insights, and pronunciations.",
-            "Interactive mini-game quizzes to gauge retention."
+            "Model buah 3D interaktif beresolusi tinggi yang dirancang ramah anak.",
+            "Fitur Augmented Reality yang memproyeksikan buah 3D ke lingkungan nyata di sekitar.",
+            "Fakta edukatif seputar gizi, manfaat kesehatan, dan pelafalan nama buah.",
+            "Kuis mini-game interaktif untuk menguji pemahaman dan daya ingat anak."
         ],
-        challenge: "Optimizing multiple high-detail 3D fruit assets to render seamlessly on standard mobile devices without lag.",
-        solution: "Modelled and optimized low-poly fruit representations using Blender, importing them into Unity and using Vuforia SDK for fluid AR tracking and stable VR viewport rendering.",
+        challenge: "Mengoptimalkan beberapa aset 3D buah berdetail tinggi agar dapat di-render dengan lancar pada perangkat mobile tanpa lag atau penurunan FPS.",
+        solution: "Memodelkan dan mengoptimasi mesh low-poly menggunakan Blender, mengimpor ke Unity, serta memanfaatkan Vuforia SDK untuk pelacakan AR yang akurat dan stabil.",
         techStack: ["UNITY 3D", "BLENDER 3D", "C#", "AUGMENTED REALITY"],
         demoLink: "#"
     },
     bensburger: {
         title: "Ben's Burger",
-        subtitle: "Cafe Promotion & Order Web",
+        subtitle: "Website Promosi & Pemesanan Kafe",
         image: "PROJEK/bensburger.PNG",
-        description: "A visually stunning cafe website designed to introduce premium burger products, manage promotions, and facilitate seamless customer orders.",
+        description: "Website kafe modern yang dirancang untuk memperkenalkan menu burger premium, mengelola penawaran promo, dan memfasilitasi alur pemesanan pelanggan dengan mulus.",
         features: [
-            "Interactive menu exploration with realtime price calculation.",
-            "Dynamic shopping cart with item additions and removals.",
-            "Modern interactive scroll animations.",
-            "Fully responsive design optimized for mobile and desktop screens."
+            "Eksplorasi menu interaktif dengan kalkulasi harga pesanan otomatis.",
+            "Keranjang belanja dinamis dengan fitur tambah, ubah, dan hapus menu.",
+            "Animasi scroll interaktif yang modern dan elegan.",
+            "Desain responsif penuh yang dioptimalkan untuk layar ponsel hingga desktop."
         ],
-        challenge: "Creating an engaging and seamless ordering experience without page reloads, while maintaining a smooth and aesthetic interface on all device sizes.",
-        solution: "Developed local state-based cart logic in pure JavaScript for instant cart updates. Integrated AOS (Animate On Scroll) and customized CSS variables to provide premium glassmorphism visuals and fluid animations.",
+        challenge: "Menciptakan pengalaman pemesanan yang cepat dan tanpa reload halaman, sambil mempertahankan tampilan visual estetis di semua ukuran layar.",
+        solution: "Mengembangkan logika keranjang belanja berbasis state lokal dengan JavaScript murni untuk pembaruan instan. Mengintegrasikan AOS (Animate On Scroll) dan CSS glassmorphism untuk tampilan visual modern.",
         techStack: ["HTML", "CSS", "JAVASCRIPT"],
         demoLink: "https://zakqy.github.io/bensburger/"
     },
     breadgift: {
         title: "Bread Gift",
-        subtitle: "Bakery and Gift Ordering Portal",
+        subtitle: "Portal Pemesanan Roti & Hadiah Kustom",
         image: "PROJEK/breadgift.PNG",
-        description: "An elegant digital storefront built for a boutique bakery and custom gift provider, featuring premium UI layouts and catalog exploration.",
+        description: "Platform toko online elegan yang dibangun untuk butik bakery dan penyedia kado kustom, menghadirkan tata letak UI premium serta kemudahan eksplorasi katalog produk.",
         features: [
-            "Premium UX/UI catalog displaying baked goods and custom gifts.",
-            "Secure backend and database integration.",
-            "Seamless order form processing.",
-            "Advanced layout systems built with Tailwind CSS."
+            "Katalog produk kue, roti, dan hadiah kustom dengan antarmuka UI/UX premium.",
+            "Integrasi basis data dan backend yang aman dan andal.",
+            "Formulir pemesanan online yang cepat dan mudah digunakan.",
+            "Sistem tata letak modern yang dirancang dengan Tailwind CSS."
         ],
-        challenge: "Handling complex client-side state and ensuring server-side rendering is optimized for fast page loads and database interactions.",
-        solution: "Built the application using React and Next.js for high-speed page loads. Integrated Tailwind CSS for state-of-the-art styling, and MySQL to manage safe and reliable data transactions.",
+        challenge: "Mengelola state di sisi klien yang kompleks dan memastikan server-side rendering berjalan optimal untuk kecepatan muat halaman serta interaksi database.",
+        solution: "Membangun aplikasi dengan React dan Next.js untuk performa muat halaman kilat. Memanfaatkan Tailwind CSS untuk styling modern, serta MySQL untuk penyimpanan transaksi data yang andal.",
         techStack: ["NEXT.JS", "REACT.JS", "MYSQL", "TAILWIND"],
         demoLink: "https://breadgift.vercel.app/"
     },
     seaheroes: {
         title: "Sea Heroes Clean Up",
-        subtitle: "Educational Ocean Cleanup Game",
+        subtitle: "Game Edukasi Pembersihan Laut",
         image: "PROJEK/GAME SEA HERO CLEAN UP.png",
-        description: "An engaging educational web game where players save marine life by collecting waste and cleaning up a polluted ocean ecosystem.",
+        description: "Game web edukatif yang menyenangkan di mana pemain berpetualang menyelamatkan biota laut dengan mengumpulkan sampah dan membersihkan ekosistem laut yang tercemar.",
         features: [
-            "Educational gameplay mechanics about environmental conservation.",
-            "Score tracking and interactive waste collection behavior.",
-            "Smooth and engaging audio and visual feedback.",
-            "Web-compatible deployment for direct browser play."
+            "Mekanik gameplay edukatif tentang pelestarian lingkungan dan kepedulian laut.",
+            "Pelacakan skor pencapaian dan perilaku pengumpulan sampah yang interaktif.",
+            "Efek audio dan visual yang menarik serta responsif.",
+            "Dukungan langsung di peramban web tanpa perlu instalasi aplikasi tambahan."
         ],
-        challenge: "Creating fluid, interactive physics and waste collection behavior that runs smoothly inside various mobile and desktop browser viewports without lags.",
-        solution: "Built with Construct 3's high-performance physics behaviors and web canvas scaling. Optimized game assets and logic to ensure minimal resource load and maximum frame rates in modern browsers.",
+        challenge: "Menciptakan simulasi fisika gerakan air dan pengambilan sampah yang halus di berbagai ukuran layar peramban tanpa hambatan performa.",
+        solution: "Dibangun dengan behavior fisika Construct 3 berkinerja tinggi serta canvas scaling web. Mengoptimasi aset grafis dan logika agar konsumsi sumber daya minimal dan frame rate tetap maksimal.",
         techStack: ["CONSTRUCT 3", "HTML5", "GAME DESIGN"],
         demoLink: "https://seaheroescleanup.itch.io/sea-heroes-clean-up"
     },
     niscala: {
         title: "Niscala",
-        subtitle: "Creative Interactive Web Portal",
+        subtitle: "Portal & Profil Web Interaktif",
         image: "PROJEK/niscala.png",
-        description: "A highly creative and aesthetically pleasing web portal built to present profile information with smooth transitions and a modular layout design.",
+        description: "Portal profil web interaktif yang dibangun dengan estetika desain modern, transisi halaman yang halus, dan tata letak modular yang bersih.",
         features: [
-            "Modern glassmorphism UI components designed for high visual appeal.",
-            "Interactive navigation elements with page-level scrolling interactions.",
-            "Clean HTML/CSS architecture focusing on semantic markup.",
-            "Fully responsive layouts styled meticulously for all viewport widths."
+            "Komponen antarmuka glassmorphism modern dengan daya tarik visual tinggi.",
+            "Elemen navigasi interaktif dengan interaksi scrolling halaman yang halus.",
+            "Arsitektur kode HTML/CSS yang rapi dan semantik.",
+            "Tata letak responsif penuh yang dirancang presisi untuk semua resolusi layar."
         ],
-        challenge: "Developing lightweight page animations and dynamic interactive hover effects using pure CSS and vanilla JavaScript without slowing down load speeds.",
-        solution: "Structured the application using standard web APIs, CSS Flexbox and Grid, and minimized external packages to achieve near-instantaneous page transitions.",
+        challenge: "Mengembangkan animasi halaman ringan dan efek hover interaktif dinamis dengan CSS dan JavaScript murni tanpa membebani kecepatan pemuatan.",
+        solution: "Menyusun struktur web menggunakan API web standar, CSS Flexbox dan Grid, serta meminimalkan dependensi eksternal untuk transisi halaman yang instan.",
         techStack: ["HTML", "CSS", "JAVASCRIPT"],
         demoLink: "#"
     },
     tugas_semester_4: {
-        title: "Web Programming Final Project 1",
-        subtitle: "Academic Web Application",
+        title: "Tugas Akhir Pemrograman Web 1",
+        subtitle: "Aplikasi Web Akademik",
         image: "PROJEK/tugas semester 4.png",
-        description: "A front-end development project created to fulfill academic coursework, demonstrating core capabilities in user interface design and page responsiveness.",
+        description: "Proyek pengembangan front-end yang dibuat untuk memenuhi tugas akademik, mendemonstrasikan kemampuan inti dalam desain antarmuka pengguna dan responsivitas web.",
         features: [
-            "Structured layout elements organized with modern CSS grid layouts.",
-            "Dynamic client-side features built with raw JavaScript handlers.",
-            "Clean, semantic page structure with embedded interactive menus.",
-            "Optimized for standard mobile, tablet, and desktop display resolutions."
+            "Elemen tata letak terstruktur yang diorganisir dengan sistem CSS grid modern.",
+            "Fitur interaktif sisi klien yang dibangun menggunakan handler JavaScript murni.",
+            "Struktur halaman bersih dan semantik dengan menu navigasi terintegrasi.",
+            "Dioptimalkan untuk resolusi layar ponsel, tablet, dan desktop."
         ],
-        challenge: "Integrating multiple design components and layout guidelines under a tight academic deadline while keeping visual presentation top-tier.",
-        solution: "Established a clear layout grid system early on, separating styling concerns from interactivity scripting to facilitate quick iteration and debugging.",
+        challenge: "Mengintegrasikan berbagai komponen desain dan ketentuan tugas di bawah batas waktu akademik yang ketat dengan tetap menjaga kerapian kode.",
+        solution: "Menetapkan sistem grid tata letak yang jelas sejak awal, memisahkan logika styling dan skrip interaktivitas untuk memudahkan iterasi dan pengujian.",
         techStack: ["HTML", "CSS", "JAVASCRIPT"],
         demoLink: "#"
     },
     desain_game_blender: {
-        title: "El's Coffee Roastery 3D Project",
-        subtitle: "3D Assets & Environment Modeling",
+        title: "Proyek 3D El's Coffee Roastery",
+        subtitle: "Pemodelan Aset & Lingkungan 3D",
         image: "PROJEK/desain game.png",
-        description: "An asset collection and detailed 3D environment modeling project, featuring high-quality models built specifically for game engine optimization.",
+        description: "Koleksi aset dan pemodelan lingkungan 3D yang mendetail, menampilkan model berkualitas tinggi yang dirancang khusus untuk optimasi game engine.",
         features: [
-            "High-fidelity 3D modeling and asset texturing using Blender.",
-            "Topology optimized specifically for rendering efficiency in games.",
-            "Creative asset modeling ranging from props to environment scenery.",
-            "Polished lighting setups and material designs."
+            "Pemodelan 3D dan texturing aset berkualitas tinggi menggunakan Blender.",
+            "Topologi yang dioptimalkan khusus untuk efisiensi rendering dalam game engine.",
+            "Pemodelan beragam objek mulai dari properti detail hingga latar pemandangan.",
+            "Penataan pencahayaan realistis dan konfigurasi material visual yang memukau."
         ],
-        challenge: "Developing high-detail game assets while ensuring the polygon counts and textures are fully optimized to prevent lag during gameplay.",
-        solution: "Employed smart retopology methods and baked complex material details onto optimized low-poly meshes, ensuring seamless game engine compatibility.",
+        challenge: "Mengembangkan aset game berdetail tinggi sambil menjaga jumlah poligon dan tekstur tetap optimal agar terhindar dari lag saat dijalankan dalam game.",
+        solution: "Menerapkan teknik retopology cerdas dan membakar (bake) detail material kompleks ke mesh low-poly yang efisien untuk kompatibilitas penuh di game engine.",
         techStack: ["BLENDER 3D", "3D MODELING", "GAME DESIGN"],
         demoLink: "#"
     },
     uiux_figma: {
-        title: "UI/UX Figma Design Case Study",
-        subtitle: "High-Fidelity App Prototyping",
+        title: "Studi Kasus Desain UI/UX Figma",
+        subtitle: "Prototipe Aplikasi High-Fidelity",
         image: "PROJEK/uiux figma.png",
-        description: "An end-to-end user experience design project depicting wireframing, component-based styling, and high-fidelity interactive prototyping.",
+        description: "Proyek desain pengalaman pengguna menyeluruh (end-to-end) yang mencakup wireframing, styling berbasis komponen, dan prototipe interaktif high-fidelity.",
         features: [
-            "Comprehensive user research, flow charting, and wireframing.",
-            "Cohesive design system including custom components and typography scales.",
-            "Interactive and clickable prototypes showcasing transitions.",
-            "Auto-layout configurations for seamless screen size adaptation."
+            "Riset pengguna komprehensif, diagram alur (flowchart), dan wireframing.",
+            "Design system yang konsisten mencakup komponen kustom dan skala tipografi.",
+            "Prototipe interaktif yang dapat diklik dengan animasi transisi yang mulus.",
+            "Konfigurasi auto-layout Figma untuk adaptasi ukuran layar yang fleksibel."
         ],
-        challenge: "Creating a navigation flow that is easy for new users to grasp, while maintaining an eye-catching, modern layout style.",
-        solution: "Applied user testing cycles on mid-fidelity wireframes to identify bottlenecks, refining into final Figma layouts with strict design consistency.",
+        challenge: "Menciptakan alur navigasi yang intuitif dan mudah dipahami oleh pengguna baru, dengan tetap menjaga gaya visual modern dan menarik.",
+        solution: "Menerapkan uji coba pengguna pada wireframe mid-fidelity untuk menemukan kendala, lalu menyempurnakannya ke layout Figma final dengan konsistensi desain yang ketat.",
         techStack: ["FIGMA", "UI/UX DESIGN", "PROTOTYPING"],
         demoLink: "#"
     }
@@ -387,18 +387,18 @@ function openProjectModal(projectId) {
     const data = projectDetailsData[projectId];
     if (!data) return;
 
-    // Determine category label
-    let categoryLabel = "WEB PROJECT";
+    // Determine category label (Bahasa Indonesia)
+    let categoryLabel = "PROYEK WEB";
     if (projectId === 'jastipin' || projectId === 'tiket_wisata_lembah_hijau') {
-        categoryLabel = "MOBILE APP PROJECT";
+        categoryLabel = "PROYEK APLIKASI MOBILE";
     } else if (projectId === 'edukasi_buah_arvr') {
-        categoryLabel = "AR/VR GAME PROJECT";
+        categoryLabel = "PROYEK GAME AR/VR";
     } else if (projectId === 'seaheroes') {
-        categoryLabel = "WEB GAME PROJECT";
+        categoryLabel = "PROYEK GAME WEB";
     } else if (projectId === 'desain_game_blender') {
-        categoryLabel = "3D MODELING PROJECT";
+        categoryLabel = "PROYEK PEMODELAN 3D";
     } else if (projectId === 'uiux_figma') {
-        categoryLabel = "UI/UX DESIGN PROJECT";
+        categoryLabel = "PROYEK DESAIN UI/UX";
     }
 
     // Generate tech stack badges HTML
@@ -418,7 +418,7 @@ function openProjectModal(projectId) {
     
     const demoButtonHTML = hasDemoLink ? `
         <a href="${data.demoLink}" target="_blank" class="modal-btn-view">
-            View project <span class="btn-arrow">↗</span>
+            Lihat Proyek <span class="btn-arrow">↗</span>
         </a>
     ` : '';
 
@@ -440,7 +440,7 @@ function openProjectModal(projectId) {
                 
                 <!-- Right side: Info details -->
                 <div class="modal-project-info">
-                    <span class="modal-project-category">* FEATURED ${categoryLabel}</span>
+                    <span class="modal-project-category">* PROYEK UNGGULAN: ${categoryLabel}</span>
                     <h2 class="modal-project-title">${data.title}</h2>
                     <p class="modal-project-desc">${data.description}</p>
                     
@@ -461,11 +461,11 @@ function openProjectModal(projectId) {
                 <div class="extra-detail-divider"></div>
                 <div class="extra-detail-grid">
                     <div class="extra-detail-block">
-                        <div class="extra-detail-title"><span class="arrow-green">↗</span> The Challenge</div>
+                        <div class="extra-detail-title"><span class="arrow-green">↗</span> Tantangan</div>
                         <p class="extra-detail-text">${data.challenge}</p>
                     </div>
                     <div class="extra-detail-block">
-                        <div class="extra-detail-title"><span class="arrow-green">↗</span> The Solution</div>
+                        <div class="extra-detail-title"><span class="arrow-green">↗</span> Solusi</div>
                         <p class="extra-detail-text">${data.solution}</p>
                     </div>
                 </div>
@@ -518,4 +518,3 @@ window.addEventListener('load', () => {
         AOS.refresh();
     }
 });
-
