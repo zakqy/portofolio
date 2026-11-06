@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
     --bg-primary: #030712;
@@ -2798,4 +2798,92 @@ footer {
         padding: 25px;
     }
 }
+
+/* ==========================================
+   PRINT / PDF EXPORT STYLES (@media print)
+   ========================================== */
+@media print {
+    /* Sembunyikan elemen navigasi, filter interaktif, dan tombol floating */
+    #navbar,
+    .hamburger-menu,
+    .nav-right-actions,
+    .back-to-top,
+    .blob,
+    .project-filters,
+    .skill-filters,
+    .certificate-filters,
+    .project-overlay-btn,
+    .cert-img-overlay,
+    .project-modal {
+        display: none !important;
+    }
+
+    /* Warna dan grafis latar belakang tetap tajam saat diexport ke PDF */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        animation: none !important;
+        transition: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body {
+        background: #030712 !important;
+        color: #f3f4f6 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Pastikan seluruh elemen animasi AOS terlihat 100% */
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
+
+    /* Hindari pemotongan kartu di tengah-tengah halaman cetak */
+    .field-project,
+    .field-certificate,
+    .edu-card,
+    .field-image-skill,
+    .hero-container,
+    .hero-stats-card,
+    .about-bio,
+    .about-grid-item {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* Tata letak grid yang rapi untuk ukuran kertas cetak / PDF */
+    .container-project {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+
+    .container-certificate {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+
+    .container-image-skill {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    section {
+        padding: 30px 15px !important;
+        page-break-after: auto;
+    }
+
+    a {
+        text-decoration: none !important;
+        color: inherit !important;
+    }
+}
+
 
