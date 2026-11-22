@@ -132,7 +132,8 @@ header {
     right: 0;
     z-index: 1000;
     height: 80px;
-    padding: 0 80px;
+    padding: 0 45px;
+    gap: 24px;
     background: rgba(3, 7, 18, 0.6);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -173,6 +174,8 @@ header h2 {
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-left: 28px;
+    flex-shrink: 0;
 }
 
 .nav-icon-link {
@@ -222,13 +225,13 @@ header h2 {
 header ul {
     display: flex;
     align-items: center;
-    gap: 26px;
+    gap: 18px;
     list-style: none;
 }
 
 header ul li a {
     font-family: 'Outfit', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--text-muted);
     text-decoration: none;
@@ -2204,13 +2207,17 @@ footer {
 
 @media (max-width: 1200px) {
     header {
-        padding: 0 40px;
+        padding: 0 30px;
+        gap: 16px;
     }
     header ul {
-        gap: 18px;
+        gap: 14px;
     }
     header ul li a {
-        font-size: 14.5px;
+        font-size: 14px;
+    }
+    .nav-right-actions {
+        margin-left: 16px;
     }
 }
 
