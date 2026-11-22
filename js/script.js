@@ -408,7 +408,7 @@ const projectDetailsData = {
         challenge: "Menghadapi variasi ukuran pakaian yang tidak konsisten antar brand serta adanya nilai data ekstrem (outlier) dan nilai hilang pada dataset mentah yang berisiko menurunkan akurasi model klasifikasi.",
         solution: "Melakukan analisis data eksploratif (EDA) dan preprocessing komprehensif di Google Colab menggunakan Scikit-learn, Pandas, dan Seaborn. Menerapkan Z-score filtering, normalisasi data, serta cross-validation guna memastikan akurasi model tetap tinggi dan bebas overfitting.",
         techStack: ["GOOGLE COLAB", "PYTHON", "K-NEAREST NEIGHBORS", "SCIKIT-LEARN", "DATA MINING"],
-        demoLink: "#"
+        demoLink: "https://colab.research.google.com/drive/19rrO_duuh3mw-ilCObCEa_JY9qosvCaR"
     }
 };
 
@@ -450,12 +450,13 @@ function openProjectModal(projectId) {
     `).join('');
 
     // Generate Demo Link button conditionally
-    const viewableProjects = ['bensburger', 'seaheroes', 'breadgift'];
+    const viewableProjects = ['bensburger', 'seaheroes', 'breadgift', 'prediktor_pakaian'];
     const hasDemoLink = viewableProjects.includes(projectId) && data.demoLink && data.demoLink !== '#';
+    const btnLabel = projectId === 'prediktor_pakaian' ? 'Buka Google Colab' : 'Lihat Proyek';
     
     const demoButtonHTML = hasDemoLink ? `
         <a href="${data.demoLink}" target="_blank" class="modal-btn-view">
-            Lihat Proyek <span class="btn-arrow">↗</span>
+            ${btnLabel} <span class="btn-arrow">↗</span>
         </a>
     ` : '';
 
