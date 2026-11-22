@@ -279,6 +279,36 @@ header ul li a.nav-cv-btn:hover {
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
 }
 
+header ul li a.nav-portfolio-btn {
+    color: #ffffff;
+    background: rgba(6, 182, 212, 0.12);
+    border: 1px solid rgba(6, 182, 212, 0.4);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.15);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+header ul li a.nav-portfolio-btn::after {
+    display: none;
+}
+
+header ul li a.nav-portfolio-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(6, 182, 212, 0.25);
+    border-color: var(--accent-teal);
+    box-shadow: 0 6px 20px rgba(6, 182, 212, 0.35);
+}
+
+header ul li a.nav-portfolio-btn i {
+    color: var(--accent-teal);
+}
+
 
 .hamburger-menu {
     display: none;
@@ -425,6 +455,43 @@ section.home,
     background: rgba(255, 255, 255, 0.16);
     border-color: #ffffff;
     transform: translateY(-3px);
+}
+
+/* Secondary Portfolio PDF Pill Button */
+.btn-hero-portfolio-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(99, 102, 241, 0.15));
+    border: 1px solid rgba(6, 182, 212, 0.45);
+    color: #ffffff !important;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.15);
+}
+
+.btn-hero-portfolio-pill i {
+    color: var(--accent-teal);
+    font-size: 15px;
+    transition: transform 0.3s ease;
+}
+
+.btn-hero-portfolio-pill:hover {
+    background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(6, 182, 212, 0.35);
+}
+
+.btn-hero-portfolio-pill:hover i {
+    color: #ffffff;
+    transform: scale(1.15);
 }
 
 
@@ -2812,6 +2879,8 @@ footer {
     .back-to-top,
     .blob,
     .btn-hero-cv-pill,
+    .btn-hero-portfolio-pill,
+    .nav-portfolio-btn,
     .btn-tentang-saya,
     .hero-cta-wrapper,
     .project-filters,
