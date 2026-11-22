@@ -80,7 +80,7 @@ certFilterButtons.forEach(button => {
             card.style.transform = 'scale(0.8)';
             
             setTimeout(() => {
-                if (filterValue === 'all' || cardCategory === filterValue) {
+                if (filterValue === 'all' || cardCategory.split(' ').includes(filterValue)) {
                     card.style.display = 'flex';
                     // Trigger reflow
                     card.offsetHeight; 
@@ -116,7 +116,7 @@ skillFilterButtons.forEach(button => {
             card.style.transform = 'scale(0.8)';
             
             setTimeout(() => {
-                if (filterValue === 'all' || cardCategory === filterValue) {
+                if (filterValue === 'all' || cardCategory.split(' ').includes(filterValue)) {
                     card.style.display = 'flex';
                     // Trigger reflow
                     card.offsetHeight; 
@@ -201,7 +201,7 @@ projectFilterButtons.forEach(button => {
             card.style.transform = 'scale(0.8)';
             
             setTimeout(() => {
-                if (filterValue === 'all' || cardCategory === filterValue) {
+                if (filterValue === 'all' || cardCategory.split(' ').includes(filterValue)) {
                     card.style.display = 'flex';
                     // Trigger reflow
                     card.offsetHeight; 
@@ -376,6 +376,39 @@ const projectDetailsData = {
         solution: "Menerapkan uji coba pengguna pada wireframe mid-fidelity untuk menemukan kendala, lalu menyempurnakannya ke layout Figma final dengan konsistensi desain yang ketat.",
         techStack: ["FIGMA", "UI/UX DESIGN", "PROTOTYPING"],
         demoLink: "#"
+    },
+    deteksi_diabetes: {
+        title: "Website Prediksi Diabetes",
+        subtitle: "Aplikasi Web Prediksi Risiko Diabetes Berbasis Docker",
+        image: "PROJEK/website pendeteksi diabetes.PNG",
+        description: "Aplikasi web kesehatan interaktif berbasis Machine Learning untuk melakukan deteksi dini risiko diabetes berdasarkan parameter klinis pengguna. Seluruh sistem dikemas dan dijalankan menggunakan Docker Container guna memastikan keandalan, portabilitas lintas lingkungan, dan isolasi dependensi runtime secara optimal.",
+        features: [
+            "Prediksi dini risiko diabetes berdasarkan input data medis dan parameter kesehatan pengguna.",
+            "Integrasi model Machine Learning untuk klasifikasi risiko yang akurat dan responsif.",
+            "Kontainerisasi penuh menggunakan Docker untuk isolasi dependensi dan kemudahan deployment.",
+            "Antarmuka web interaktif yang modern, bersih, dan mudah diakses pengguna."
+        ],
+        challenge: "Mengelola dependensi pustaka Machine Learning dan Python yang kompleks agar dapat berjalan stabil serta identik di lingkungan lokal maupun server produksi tanpa kendala versi paket.",
+        solution: "Menerapkan Dockerisasi dengan menyusun Dockerfile dan arsitektur kontainer terisolasi, sehingga runtime Python, pustaka ML, dan antarmuka web terbundel sempurna dalam satu image yang portabel.",
+        techStack: ["DOCKER", "PYTHON", "MACHINE LEARNING", "WEB APP"],
+        demoLink: "#"
+    },
+    prediktor_pakaian: {
+        title: "Prediktor Ukuran Pakaian Cerdas",
+        subtitle: "Smart Clothing Size Predictor Menggunakan Algoritma K-Nearest Neighbors (KNN)",
+        image: "PROJEK/Prediktor Ukuran Pakaian Cerdas Menggunakan Algoritma K-Nearest Neighbors.PNG",
+        description: "Proyek riset Data Mining dan Machine Learning yang dikembangkan menggunakan Google Colab untuk memprediksi rekomendasi ukuran pakaian ideal (XXS hingga XXXL) berdasarkan usia, berat badan, tinggi badan, dan indeks massa tubuh (BMI). Memanfaatkan algoritma K-Nearest Neighbors (KNN) dengan serangkaian tahap pembersihan data mendalam, penanganan outlier, serta rekayasa fitur.",
+        features: [
+            "Pengembangan algoritma K-Nearest Neighbors (KNN) untuk prediksi ukuran pakaian secara presisi.",
+            "Lingkungan riset komputasi awan interaktif menggunakan Google Colab dan Jupyter Notebook.",
+            "Pipeline preprocessing data: imputasi nilai median, deteksi outlier Z-Score, dan normalisasi fitur.",
+            "Rekayasa fitur lanjutan dengan pembuatan variabel turunan BMI dan kuadrat berat badan (weight-squared).",
+            "Evaluasi komparatif model dengan confusion matrix dan visualisasi data lengkap (EDA & heatmap korelasi)."
+        ],
+        challenge: "Menghadapi variasi ukuran pakaian yang tidak konsisten antar brand serta adanya nilai data ekstrem (outlier) dan nilai hilang pada dataset mentah yang berisiko menurunkan akurasi model klasifikasi.",
+        solution: "Melakukan analisis data eksploratif (EDA) dan preprocessing komprehensif di Google Colab menggunakan Scikit-learn, Pandas, dan Seaborn. Menerapkan Z-score filtering, normalisasi data, serta cross-validation guna memastikan akurasi model tetap tinggi dan bebas overfitting.",
+        techStack: ["GOOGLE COLAB", "PYTHON", "K-NEAREST NEIGHBORS", "SCIKIT-LEARN", "DATA MINING"],
+        demoLink: "#"
     }
 };
 
@@ -399,6 +432,10 @@ function openProjectModal(projectId) {
         categoryLabel = "PROYEK PEMODELAN 3D";
     } else if (projectId === 'uiux_figma') {
         categoryLabel = "PROYEK DESAIN UI/UX";
+    } else if (projectId === 'deteksi_diabetes') {
+        categoryLabel = "PROYEK WEB & DOCKER";
+    } else if (projectId === 'prediktor_pakaian') {
+        categoryLabel = "PROYEK DATA MINING & AI";
     }
 
     // Generate tech stack badges HTML
